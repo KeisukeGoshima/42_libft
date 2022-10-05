@@ -6,16 +6,16 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:51:40 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/05 12:24:54 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/06 07:30:29 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	ft_frontCheck(char const *s1, char const *set, int front)
+int	ft_frontcheck(char const *s1, char const *set, int front)
 {
-	int i;
+	int	i;
 
 	while (s1[front] != '\0')
 	{
@@ -27,13 +27,13 @@ int	ft_frontCheck(char const *s1, char const *set, int front)
 			i++;
 		}
 		if (set[i] == '\0')
-			break;
+			break ;
 		front++;
 	}
 	return (front);
 }
 
-int ft_backCheck(char const *s1, char const *set, int back)
+int	ft_backcheck(char const *s1, char const *set, int back)
 {
 	int	i;
 
@@ -47,7 +47,7 @@ int ft_backCheck(char const *s1, char const *set, int back)
 			i++;
 		}
 		if (set[i] == '\0')
-			break;
+			break ;
 		back--;
 	}
 	return (back);
@@ -57,11 +57,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		front;
 	int		back;
-	int 	i;
+	int		i;
 	char	*str;
 
-	front = ft_frontCheck(s1, set, 0);
-	back = ft_backCheck(s1, set, ft_strlen(s1) - 1);
+	front = ft_frontcheck(s1, set, 0);
+	back = ft_backcheck(s1, set, ft_strlen(s1) - 1);
 	if (front > back)
 		str = malloc(sizeof(char) * 1);
 	else
