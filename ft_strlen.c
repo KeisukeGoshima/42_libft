@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 07:09:35 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/05 07:47:06 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/05 11:17:06 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,54 +20,6 @@ size_t	ft_strlen(const char *s)
 	while (s[i] != '\0')
 		i++;
 	return (i);
-}
-
-void	*ft_memset(void *buf, int ch, size_t n)
-{
-	char	*str;
-
-	str = (char *)buf;
-	while (n--)
-		*str++ = ch;
-	return (buf);
-}
-
-void	ft_bzero(void *s, size_t n)
-{
-	char	*str;
-
-	str = (char *)s;
-	while (n--)
-		*str++ = 0;
-}
-
-void	*ft_memcpy(void *buf1, const void *buf2, size_t n)
-{
-	char	*dest;
-	char	*src;
-
-	dest = (char *)buf1;
-	src = (char *)buf2;
-	while (n--)
-		*dest++ = *src++;
-	return (buf1);
-}
-
-void	*ft_memmove(void *buf1, const void *buf2, size_t n)
-{
-	char	*dest;
-	char	*src;
-	size_t	i;
-
-	dest = (char *)buf1;
-	src = (char *)buf2;
-	i = 1;
-	while (i <= n)
-	{
-		dest[n - i] = src[n - i];
-		i++;
-	}
-	return (buf1);
 }
 
 // #include <stdio.h>

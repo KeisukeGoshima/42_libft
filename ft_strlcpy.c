@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 07:48:56 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/05 09:18:57 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/05 11:20:27 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,55 +26,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	}
 	dst[i] = '\0';
 	return (ft_strlen(src));
-}
-
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	size_t	len_dest;
-	size_t	len_src;
-	size_t	i;
-
-	len_dest = ft_strlen(dst);
-	len_src = ft_strlen(src);
-	i = 0;
-	if (size > len_dest)
-	{
-		while (i < len_src && len_dest + i < size)
-		{
-			dst[len_dest + i] = src[i];
-			i++;
-		}
-		dst[size - 1] = '\0';
-		return (len_dest + len_src);
-	}
-	return (size + len_src);
-}
-
-int	ft_toupper(int c)
-{
-	if ('a' <= c && c <= 'z')
-		return (c - 'a' + 'A');
-	return (c);
-}
-
-int	ft_tolower(int c)
-{
-	if ('A' <= c && c <= 'Z')
-		return (c - 'A' + 'a');
-	return (c);
-}
-
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s != '\0')
-	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
-	}
-	if (c == '\0')
-		return ((char *)s);
-	return (0);
 }
 
 // #include <stdio.h>
