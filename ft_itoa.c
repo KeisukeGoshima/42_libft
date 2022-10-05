@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 07:31:02 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 08:04:13 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/06 08:11:56 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	setnum(int n, int count, char *str, int sign)
 	long	div;
 	int		i;
 
+	if (n < 0)
+		n *= -1;
 	digit = countdigit(n);
 	div = 1;
 	while (digit--)
@@ -67,11 +69,10 @@ char	*ft_itoa(int n)
 		n += 1;
 	}
 	if (n <= 0)
-	{
 		sign = 1;
-		n *= -1;
-	}
 	str = malloc(sizeof(char) * (count + sign + 1));
+	if (str == NULL)
+		return (NULL);
 	setnum(n, count, str, sign);
 	if (ismin)
 		str[count + sign - 1] = '8';
