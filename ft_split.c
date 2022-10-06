@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 06:59:22 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 07:29:09 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:40:53 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,7 @@ void	setstring(char const *s, char c, char **str)
 		if (s[i] == c)
 		{
 			if (amount != 0)
-			{
-				setone(&s[i - amount], str, count, amount);
-				count++;
-			}
+				setone(&s[i - amount], str, count++, amount);
 			amount = 0;
 		}
 		else
@@ -79,7 +76,8 @@ void	setstring(char const *s, char c, char **str)
 		i++;
 	}
 	if (amount != 0)
-		setone(&s[i - amount], str, count, amount);
+		setone(&s[i - amount], str, count++, amount);
+	str[count] = 0;
 }
 
 void	setone(char const *s, char **str, int count, int amount)
@@ -96,7 +94,6 @@ void	setone(char const *s, char **str, int count, int amount)
 	}
 	temp[i] = '\0';
 	str[count] = temp;
-	str[count + 1] = 0;
 }
 
 // #include <stdio.h>

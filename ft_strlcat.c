@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:18:37 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 10:17:54 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:10:55 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		len_dest = ft_strlen(dst);
 	len_src = ft_strlen(src);
 	i = 0;
-	if (size > len_dest + 1)
+	if (size >= len_dest + 1)
 	{
 		while (i < len_src && len_dest + 1 + i < size)
 		{

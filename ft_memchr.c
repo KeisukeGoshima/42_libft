@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:22:16 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/05 11:23:11 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:37:43 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	*ft_memchr(const void *buf, int ch, size_t n)
 	size_t	i;
 
 	str = (char *)buf;
+	ch %= 256;
 	i = 0;
 	while (i < n)
 	{
@@ -25,5 +26,5 @@ void	*ft_memchr(const void *buf, int ch, size_t n)
 			return ((void *)&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

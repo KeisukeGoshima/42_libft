@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:51:40 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 07:30:29 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:13:10 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 		str = malloc(sizeof(char) * 1);
 	else
 		str = malloc(sizeof(char) * (back - front + 2));
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	while (i < back - front + 1)
 	{
 		str[i] = s1[front + i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
 
