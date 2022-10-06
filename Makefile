@@ -5,7 +5,7 @@ SRCS		= $(wildcard *.c)
 OBJS		= $(notdir $(SRCS:.c=.o))
 INCLUDEDIR	= ./includes
 INCLUDE		= ./includes/ft.h
-NAME		=  ft_hexdump
+NAME		= libft.a
 
 
 all:			$(NAME)
