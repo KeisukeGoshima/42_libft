@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:22:31 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/05 11:23:40 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/06 10:59:37 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 
 	i = 0;
 	j = 0;
+	if (s1 == NULL && len == 0)
+		return (NULL);
 	if (s2[0] == '\0')
 		return ((char *)s1);
 	while (s1[i] != '\0' && i < len)

@@ -1,7 +1,7 @@
 CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 SRCSDIR		= ./srcs
-SRCS		= $(wildcard *.c)
+SRCS		= $(wildcard ft_*.c)
 OBJS		= $(notdir $(SRCS:.c=.o))
 INCLUDEDIR	= ./includes
 INCLUDE		= ./includes/ft.h
@@ -16,6 +16,10 @@ clean:
 fclean:			clean
 				rm -f $(NAME)
 
+re:				fclean all
+
 $(NAME):		$(OBJS)
-				$(CC) $(OBJS) -o $(NAME)
-				
+				ar rc $(NAME) $(OBJS)
+				ranlib $(NAME)
+
+f:				fclean

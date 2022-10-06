@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 10:20:29 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/05 11:24:54 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:05:48 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,21 +39,13 @@ int	ft_atoi(const char *str)
 	return (num);
 }
 
-// #include <stdio.h>
-// #include <stdlib.h>
-// int main(int argc, char **argv)
-// {
-// 	int *num;
-// 	printf("atoi: %d\n", atoi(argv[argc-1]));
-// 	printf("ft_atoi: %d\n", ft_atoi(argv[argc-1]));
-// 	printf("atoi: %d\n", atoi("		\t \n 12"));
-// 	printf("ft_atoi: %d\n", ft_atoi("	\t \n 12"));
-// 	num = (int *)ft_calloc(2, sizeof(int));
-// 	printf("num: %d", num[0]);
-// 	printf("num: %d\n", num[1]);
-// 	num = (int *)calloc(2, sizeof(int));
-// 	printf("num: %d", num[0]);
-// 	printf("num: %d", num[1]);
-
-// 	return (0);
-// }
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char **argv)
+{
+	printf("atoi: %d\n", atoi(argv[argc-1]));
+	printf("ft_atoi: %d\n", ft_atoi(argv[argc-1]));
+	printf("atoi: %d\n", atoi("		\t \n 12"));
+	printf("ft_atoi: %d\n", ft_atoi("	\t \n 12"));
+	return (0);
+}
