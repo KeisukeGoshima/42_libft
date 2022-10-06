@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:15:57 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 10:56:47 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:56:15 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	backcopy(unsigned char *dest, unsigned char *src, size_t n)
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 1;
 	while (i <= n)
 	{
@@ -26,8 +26,8 @@ void	backcopy(unsigned char *dest, unsigned char *src, size_t n)
 
 void	frontcopy(unsigned char *dest, unsigned char *src, size_t n)
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 0;
 	while (i < n)
 	{

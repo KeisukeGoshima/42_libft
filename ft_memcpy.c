@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:15:53 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 10:56:19 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:55:51 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	*ft_memcpy(void *buf1, const void *buf2, size_t n)
 // 	void *add2;
 // 	void *add3;
 // 	void *add4;
-	
 // 	add = &str[0];
 // 	add = 0;
 // 	add2 = &str[5];
