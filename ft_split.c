@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 06:59:22 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 12:40:53 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 08:21:56 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**str;
 
+	if (s == NULL)
+		return (NULL);
 	str = malloc(sizeof(char *) * (countsep(s, c) + 1));
 	if (str == NULL)
 		return (NULL);

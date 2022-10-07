@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:27:03 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 13:00:55 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 08:23:45 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	int		i;
 	int		length;
 
+	if (s == NULL)
+		return (NULL);
 	length = (int)len;
 	if (length + start > ft_strlen(s))
 		length = ft_strlen(s) - start;

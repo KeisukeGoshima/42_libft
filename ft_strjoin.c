@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:43:45 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 11:40:47 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 08:23:14 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*dest;
 	int		i;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	dest = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (dest == NULL)
 		return (0);

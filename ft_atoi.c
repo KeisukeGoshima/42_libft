@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 10:20:29 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 11:50:35 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 08:38:09 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,18 @@ int	ft_atoi(const char *str)
 			break ;
 		num = num * 10 + sign * (str[i] - '0');
 		i++;
+		write(1, "a", 1);
 	}
 	return (num);
 }
 
 // #include <stdio.h>
 // #include <stdlib.h>
+// #include <limits.h>
 // int main(int argc, char **argv)
 // {
 // 	printf("atoi: %d\n", atoi(argv[argc-1]));
 // 	printf("ft_atoi: %d\n", ft_atoi(argv[argc-1]));
+// 	printf("%d\n", atoi(argv[argc-1]) == ft_atoi(argv[argc - 1]));
 // 	return (0);
 // }

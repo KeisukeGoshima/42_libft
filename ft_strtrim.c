@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:51:40 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 11:13:10 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 08:22:36 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	char	*str;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	front = ft_frontcheck(s1, set, 0);
 	back = ft_backcheck(s1, set, ft_strlen(s1) - 1);
 	if (front > back)
