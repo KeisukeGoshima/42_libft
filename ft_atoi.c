@@ -6,21 +6,14 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 10:20:29 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 12:57:47 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 13:05:25 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-int	ft_atoi(const char *str)
-{
-	long	num;
-	int		i;
-	int		sign;
 
-	num = 0;
-	i = 0;
-	sign = 1;
+long	ft_check_front_atoi(const char *str, long num, int i, int sign)
+{
 	while (str[i] == ' ' || (9 <= str[i] && str[i] <= 13))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
@@ -45,6 +38,19 @@ int	ft_atoi(const char *str)
 	return (num);
 }
 
+int	ft_atoi(const char *str)
+{
+	long	num;
+	int		i;
+	int		sign;
+
+	num = 0;
+	i = 0;
+	sign = 1;
+	num = ft_check_front_atoi(str, num, i, sign);
+	return (num);
+}
+
 // #include <stdio.h>
 // #include <stdlib.h>
 // #include <limits.h>
@@ -53,7 +59,5 @@ int	ft_atoi(const char *str)
 // 	printf("atoi: %d\n", atoi(argv[argc-1]));
 // 	printf("ft_atoi: %d\n", ft_atoi(argv[argc-1]));
 // 	printf("%d\n", atoi(argv[argc-1]) == ft_atoi(argv[argc - 1]));
-// 	printf("atoi: %d, ft_atoi:%d\n", atoi("9223372036854775808"), ft_atoi("9223372036854775808"));
-// 	printf("atoi: %d, ft_atoi:%d\n", atoi("-9223372036854775809"), ft_atoi("-9223372036854775809"));
 // 	return (0);
 // }
