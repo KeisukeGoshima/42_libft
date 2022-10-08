@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 08:47:27 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 10:48:13 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 11:21:45 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,12 @@ void	ft_putnbr_fd(int n, int fd)
 	long	div;
 
 	extra = 0;
-	if (n < 0)
+	if (n == 0)
+	{
+		write(fd, "0", 1);
+		return ;
+	}
+	else if (n < 0)
 	{
 		write(fd, "-", 1);
 		if (n == -2147483648)
@@ -56,6 +61,6 @@ void	ft_putnbr_fd(int n, int fd)
 // {
 // 	int fd;
 // 	fd = open("./test", O_WRONLY);
-// 	ft_putnbr_fd(-2147483647, fd);
+// 	ft_putnbr_fd(0, fd);
 // 	return (0);
 // }
