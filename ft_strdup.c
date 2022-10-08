@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:24:32 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 09:49:07 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 17:39:22 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 char	*ft_strdup(const char *s)
 {
 	char	*str;
-	int		i;
+	size_t	i;
 
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (str == NULL)

@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:43:45 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 08:23:14 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 17:41:12 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dest;
-	int		i;
+	size_t	i;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
