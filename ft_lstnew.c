@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 13:03:53 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 13:40:54 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 10:30:53 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,10 @@ t_list	*ft_lstnew(void *content)
 	temp -> next = NULL;
 	return (temp);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	t_list * l =   ft_lstnew((void*)1);
+// 	printf("%d\n", (int)l->content);
+// }

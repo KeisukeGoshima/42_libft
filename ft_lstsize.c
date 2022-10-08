@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 13:10:39 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 13:26:02 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 10:32:15 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,15 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	t_list * l =  NULL;
+// 	int i;
+// 	ft_lstadd_front(&l, ft_lstnew((void*)1));
+// 	ft_lstadd_front(&l, ft_lstnew((void*)2));
+// 	ft_lstadd_front(&l, ft_lstnew((void*)3));
+// 	i = ft_lstsize(l);
+// 	printf("%d", i);
+// }

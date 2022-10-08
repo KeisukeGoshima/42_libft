@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 13:19:16 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 07:14:11 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 10:12:26 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		temp -> next = new;
 	}
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	t_list * l =  NULL; t_list * l2 =  NULL; 
+// 	ft_lstadd_back(&l, ft_lstnew((void*)1));
+// 	printf("%d", (int)l->content);
+// }
