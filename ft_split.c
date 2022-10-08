@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 06:59:22 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 17:12:18 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 17:36:07 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*setone(char const *s, int *error, int amount);
 void	error_check(char **str)
 {
 	int	i;
-	
+
 	i = 0;
 	while (str[i] != NULL)
 		free(str[i++]);
