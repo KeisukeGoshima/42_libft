@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:22:22 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/05 11:23:23 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 09:40:30 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,13 @@ int	ft_memcmp(const void *buf1, const void *buf2, size_t n)
 	}
 	return (0);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char s[] = "0123456789";
+// 	char t[] = "0124";
+// 	printf("%d\n", ft_memcmp(s, t, 3));
+// 	printf("%d\n", ft_memcmp(s, t, 4));
+// 	return (0);
+// }

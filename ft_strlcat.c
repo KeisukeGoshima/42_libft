@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:18:37 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 12:10:55 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 09:59:25 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,21 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (size + len_src);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char str1[] = "01234";
+// 	char str2[] = "abcde";
+// 	char str11[] = "01234";
+// 	char str21[] = "abcde";
+// 	size_t i;
+
+// 	i = ft_strlcat(str1, str2, 10);
+// 	printf("%s\n", str1);
+// 	printf("%zu\n", i);
+// 	i = ft_strlcat(str11, str21, 3);
+// 	printf("%s\n", str11);
+// 	printf("%zu\n", i);
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 10:20:29 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 08:38:09 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 08:41:54 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	ft_atoi(const char *str)
 			break ;
 		num = num * 10 + sign * (str[i] - '0');
 		i++;
-		write(1, "a", 1);
 	}
 	return (num);
 }

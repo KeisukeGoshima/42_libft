@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:22:05 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 12:57:11 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 10:03:26 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,16 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (s1u[i] - s2u[i]);
 	return (0);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char *str = "0123456789";
+// 	char *str1 = "0123";
+// 	int i;
+// 	i = ft_strncmp(str, str1, 4);
+// 	printf("%d\n", i);
+// 	i = ft_strncmp(str, str1, 5);
+// 	printf("%d", i);
+// 	return (0);
+// }

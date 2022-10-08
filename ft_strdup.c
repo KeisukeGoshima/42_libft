@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:24:32 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 11:10:55 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 09:49:07 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,16 @@ char	*ft_strdup(const char *s)
 	str[i] = '\0';
 	return (str);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char *str1 = "01234567890123456789";
+// 	char *str2;
+// 	int i;
+
+// 	str2 = ft_strdup(str1);
+// 	printf("%s\n", str1);
+// 	printf("%s\n", str2);
+// 	return (0);
+// }

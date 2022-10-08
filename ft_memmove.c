@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:15:57 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 12:56:15 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 09:42:32 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,3 +51,16 @@ void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 		frontcopy(dest, src, n);
 	return (buf1);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char s[] = "0123456789";
+// 	char t[] = "abcd";
+// 	char *s1;
+
+// 	s1 = ft_memmove(s, t, 2);
+// 	printf("%s\n", s);
+// 	printf("%s\n", s1);
+// 	return (0);
+// }
