@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 07:23:03 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 10:29:44 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 16:44:21 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			return (NULL);
 		}
 		temp -> content = (*f)(lst -> content);
+		temp -> next = NULL;
 		if (new_list == NULL)
 			new_list = temp;
 		else

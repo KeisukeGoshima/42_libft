@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 13:19:16 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 10:12:26 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 16:36:13 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	if (new == NULL)
+	if (new == NULL || lst == NULL)
 		return ;
 	else if (*lst == NULL)
 		*lst = new;

@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:22:31 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 10:07:46 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 17:20:53 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,15 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 }
 
 // #include <stdio.h>
+// #include <string.h>
 // int main(void)
 // {
 // 	char *str = "0123456789";
 // 	char *str1 = "45";
 // 	char *i;
-// 	i = ft_strnstr(str, str1, 9);
+// 	i = ft_strnstr(str, "", 9);
 // 	printf("%s\n", i);
-// 	i = ft_strnstr(str, str1, 4);
+// 	i = strnstr(str, "", 9);
 // 	printf("%s", i);
 // 	return (0);
 // }

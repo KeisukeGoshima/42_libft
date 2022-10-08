@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:15:57 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 09:42:32 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 16:48:39 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 	src = (unsigned char *)buf2;
 	if (buf1 > buf2)
 		backcopy(dest, src, n);
-	else
+	else if (buf2 > buf1)
 		frontcopy(dest, src, n);
 	return (buf1);
 }

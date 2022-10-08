@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 13:07:20 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 10:14:14 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 16:38:12 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (new != NULL)
+	t_list	*temp;
+	
+	if (new != NULL || lst == NULL)
 	{
+		temp = ft_lstlast(new);
 		if (lst != NULL)
-			new -> next = *lst;
+			temp -> next = *lst;
 		*lst = new;
 	}
 }

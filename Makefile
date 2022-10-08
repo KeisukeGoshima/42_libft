@@ -26,7 +26,6 @@ re:				fclean all
 
 $(NAME):		$(OBJS)
 				ar rc $(NAME) $(OBJS)
-				ranlib $(NAME)
 
 bonus:			
 				make WITH_BONUS=1

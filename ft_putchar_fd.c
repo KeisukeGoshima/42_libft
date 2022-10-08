@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 08:32:52 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 08:38:57 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 16:50:22 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	write(fd, &c, sizeof(char));
 }
 
 // #include <fcntl.h>

@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:12:28 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 09:26:41 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/08 17:11:52 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	ft_isalpha(int c)
 }
 
 // #include <stdio.h>
+// #include <ctype.h>
 // int main(void)
 // {
 // 	char str1 = 'a';
