@@ -6,13 +6,14 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 06:57:34 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 09:05:59 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/09 09:12:26 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <limits.h>
 
 typedef struct s_list
 {

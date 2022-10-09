@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 10:20:29 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 13:05:25 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/09 09:28:45 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,16 @@ long	ft_check_front_atoi(const char *str, long num, int i, int sign)
 	}
 	while (str[i] != '\0')
 	{
-		if (str[i] < '0' || str[i] > '9' || num * sign > num * 10 * sign)
-		{
-			if (num * sign > num * 10 * sign && num <= 0)
-				num = 0;
-			else if (num * sign > num * 10 * sign && num > 0)
-				num = -1;
+		if (str[i] < '0' || str[i] > '9' )
 			break ;
-		}
+		if (num > 0 && num == LONG_MAX / 10 && (str[i] - '0') > LONG_MAX % 10)
+			return (LONG_MAX);
+		if (num > 0 && num > LONG_MAX / 10)
+			return (LONG_MAX);
+		if (num < 0 && num == LONG_MIN / 10 && -(str[i] - '0') < LONG_MIN % 10)
+			return (LONG_MIN);
+		if (num < 0 && num < LONG_MIN / 10)
+			return (LONG_MIN);
 		num = num * 10 + sign * (str[i] - '0');
 		i++;
 	}
@@ -40,15 +42,7 @@ long	ft_check_front_atoi(const char *str, long num, int i, int sign)
 
 int	ft_atoi(const char *str)
 {
-	long	num;
-	int		i;
-	int		sign;
-
-	num = 0;
-	i = 0;
-	sign = 1;
-	num = ft_check_front_atoi(str, num, i, sign);
-	return (num);
+	return (ft_check_front_atoi(str, 0, 0, 1));
 }
 
 // #include <stdio.h>
@@ -56,6 +50,7 @@ int	ft_atoi(const char *str)
 // #include <limits.h>
 // int main(int argc, char **argv)
 // {
+// 	printf("%ld\n", LONG_MIN % 10);
 // 	printf("atoi: %d\n", atoi(argv[argc-1]));
 // 	printf("ft_atoi: %d\n", ft_atoi(argv[argc-1]));
 // 	printf("%d\n", atoi(argv[argc-1]) == ft_atoi(argv[argc - 1]));
