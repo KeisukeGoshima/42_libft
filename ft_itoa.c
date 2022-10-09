@@ -6,14 +6,14 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 07:31:02 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/06 08:11:56 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/09 09:38:29 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	countdigit(int n)
+int	countdigit(long n)
 {
 	int	digit;
 
@@ -26,14 +26,12 @@ int	countdigit(int n)
 	return (digit);
 }
 
-void	setnum(int n, int count, char *str, int sign)
+void	setnum(long n, int count, char *str, int sign)
 {
 	int		digit;
 	long	div;
 	int		i;
 
-	if (n < 0)
-		n *= -1;
 	digit = countdigit(n);
 	div = 1;
 	while (digit--)
@@ -56,26 +54,22 @@ void	setnum(int n, int count, char *str, int sign)
 char	*ft_itoa(int n)
 {
 	int		count;
-	int		ismin;
+	long	num;
 	int		sign;
 	char	*str;
 
-	count = countdigit(n);
 	sign = 0;
-	ismin = 0;
-	if (n == -2147483648)
+	num = n;
+	if (num <= 0)
 	{
-		ismin = 1;
-		n += 1;
-	}
-	if (n <= 0)
 		sign = 1;
+		num *= -1;
+	}
+	count = countdigit(num);
 	str = malloc(sizeof(char) * (count + sign + 1));
 	if (str == NULL)
 		return (NULL);
-	setnum(n, count, str, sign);
-	if (ismin)
-		str[count + sign - 1] = '8';
+	setnum(num, count, str, sign);
 	str[count + sign] = '\0';
 	return (str);
 }

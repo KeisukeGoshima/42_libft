@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 07:18:49 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 10:21:39 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/09 09:49:01 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst != NULL)
+	if (lst != NULL && (*f) != NULL)
 	{
 		while (lst != 0)
 		{

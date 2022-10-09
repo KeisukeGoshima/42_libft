@@ -6,17 +6,19 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:51:40 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 08:22:36 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/09 10:44:28 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	ft_frontcheck(char const *s1, char const *set, int front)
+int	ft_frontcheck(char const *s1, char const *set, size_t front)
 {
-	int	i;
+	size_t	i;
 
+	if (set == NULL)
+		return (front);
 	while (s1[front] != '\0')
 	{
 		i = 0;
@@ -33,16 +35,18 @@ int	ft_frontcheck(char const *s1, char const *set, int front)
 	return (front);
 }
 
-int	ft_backcheck(char const *s1, char const *set, int back)
+int	ft_backcheck(char const *s1, char const *set, size_t back)
 {
-	int	i;
+	size_t	i;
 
-	while (back >= 0)
+	if (set == NULL)
+		return (back);
+	while (back > 0)
 	{
 		i = 0;
 		while (set[i] != '\0')
 		{
-			if (s1[back] == set[i])
+			if (s1[back - 1] == set[i])
 				break ;
 			i++;
 		}
@@ -55,23 +59,23 @@ int	ft_backcheck(char const *s1, char const *set, int back)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		front;
-	int		back;
-	int		i;
+	size_t	front;
+	size_t	back;
+	size_t	i;
 	char	*str;
 
-	if (s1 == NULL || set == NULL)
+	if (s1 == NULL)
 		return (NULL);
 	front = ft_frontcheck(s1, set, 0);
-	back = ft_backcheck(s1, set, ft_strlen(s1) - 1);
+	back = ft_backcheck(s1, set, ft_strlen(s1));
 	if (front > back)
 		str = malloc(sizeof(char) * 1);
 	else
-		str = malloc(sizeof(char) * (back - front + 2));
+		str = malloc(sizeof(char) * (back - front + 1));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	while (i < back - front + 1)
+	while (i < back - front)
 	{
 		str[i] = s1[front + i];
 		i++;

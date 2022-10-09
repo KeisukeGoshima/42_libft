@@ -6,54 +6,47 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 08:47:27 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 11:21:45 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/09 10:08:45 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void	setnumber(int n, int extra, long div, int fd)
+void	setnumber(long n, long div, int fd)
 {
-	int		a;
-	int		b;
+	long	a;
+	long	b;
 
 	a = n / div + '0';
 	b = n % div;
 	div /= 10;
-	if (div == 0 && extra)
-		a++;
 	write(fd, &a, 1);
 	if (div != 0)
-		setnumber(b, extra, div, fd);
+		setnumber(b, div, fd);
 }
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		extra;
+	long	num;
 	long	div;
 
-	extra = 0;
-	if (n == 0)
+	num = n;
+	if (num == 0)
 	{
 		write(fd, "0", 1);
 		return ;
 	}
-	else if (n < 0)
+	else if (num < 0)
 	{
 		write(fd, "-", 1);
-		if (n == -2147483648)
-		{
-			extra = 1;
-			n += 1;
-		}
-		n *= -1;
+		num *= -1;
 	}
 	div = 1;
-	while (n >= div)
+	while (num >= div)
 		div *= 10;
 	div /= 10;
-	setnumber(n, extra, div, fd);
+	setnumber(num, div, fd);
 }
 
 // #include <fcntl.h>

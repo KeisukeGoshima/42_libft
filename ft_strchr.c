@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:18:33 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 11:35:21 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/09 10:11:45 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (c < 0)
-		c += 256;
-	c %= 256;
 	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*s == (char )c)
 			return ((char *)s);
 		s++;
 	}

@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 07:23:03 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 16:44:21 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/09 09:56:52 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*temp_before;
 
 	new_list = NULL;
-	while (lst != NULL)
+	while (lst != NULL && (*f) != NULL)
 	{
 		temp = malloc(sizeof(t_list));
 		if (temp == NULL)
@@ -43,10 +43,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // #include <stdio.h>
 // void *temp(void *content)
 // {
-// 	int i;
-
-// 	i = (int)content + 1;
-// 	return ((void *)i);
+// 	return (content);
 // }
 // void del(void *content)
 // {
@@ -54,12 +51,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // }
 // int main(void)
 // {
-// 	t_list * l =  NULL;
+// 	t_list *l =  NULL;
 // 	ft_lstadd_front(&l, ft_lstnew((void*)1));
 // 	ft_lstadd_front(&l, ft_lstnew((void*)2));
 // 	ft_lstadd_front(&l, ft_lstnew((void*)3));
 // 	printf("%d\n", (int)l->content);
 // 	t_list *t;
 // 	t = ft_lstmap(l, &temp, &del);
-// 	printf("%d", (int)t->content);
+// 	// printf("%d", (int)t->content);
 // }
