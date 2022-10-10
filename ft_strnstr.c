@@ -6,13 +6,13 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:22:31 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/09 10:27:42 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:18:38 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_search(const char *s1, const char *s2, size_t len)
+static char	*ft_search(const char *s1, const char *s2, size_t len)
 {
 	size_t	i;
 	size_t	j;

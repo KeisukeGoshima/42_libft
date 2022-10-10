@@ -6,14 +6,14 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 07:31:02 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/09 09:38:29 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:12:00 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	countdigit(long n)
+static int	countdigit(long n)
 {
 	int	digit;
 
@@ -26,7 +26,7 @@ int	countdigit(long n)
 	return (digit);
 }
 
-void	setnum(long n, int count, char *str, int sign)
+static void	setnum(long n, int count, char *str, int sign)
 {
 	int		digit;
 	long	div;

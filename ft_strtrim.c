@@ -6,14 +6,14 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:51:40 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/09 10:44:28 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:19:22 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	ft_frontcheck(char const *s1, char const *set, size_t front)
+static size_t	ft_frontcheck(char const *s1, char const *set, size_t front)
 {
 	size_t	i;
 
@@ -35,7 +35,7 @@ int	ft_frontcheck(char const *s1, char const *set, size_t front)
 	return (front);
 }
 
-int	ft_backcheck(char const *s1, char const *set, size_t back)
+static size_t	ft_backcheck(char const *s1, char const *set, size_t back)
 {
 	size_t	i;
 

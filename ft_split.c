@@ -6,18 +6,18 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 06:59:22 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 17:36:07 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:17:21 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int		countsep(char const *s, char c);
-void	setstring(char const *s, char c, char **str, int *error);
-char	*setone(char const *s, int *error, int amount);
+static int	countsep(char const *s, char c);
+static void	setstring(char const *s, char c, char **str, int *error);
+static char	*setone(char const *s, int *error, int amount);
 
-void	error_check(char **str)
+static void	error_check(char **str)
 {
 	int	i;
 
@@ -46,7 +46,7 @@ char	**ft_split(char const *s, char c)
 	return (str);
 }
 
-int	countsep(char const *s, char c)
+static int	countsep(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -72,7 +72,7 @@ int	countsep(char const *s, char c)
 	return (count);
 }
 
-void	setstring(char const *s, char c, char **str, int *error)
+static void	setstring(char const *s, char c, char **str, int *error)
 {
 	int	i;
 	int	count;
@@ -98,7 +98,7 @@ void	setstring(char const *s, char c, char **str, int *error)
 	str[count] = 0;
 }
 
-char	*setone(char const *s, int *error, int amount)
+static char	*setone(char const *s, int *error, int amount)
 {
 	char	*temp;
 	int		i;

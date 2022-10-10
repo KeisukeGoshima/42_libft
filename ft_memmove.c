@@ -6,13 +6,13 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:15:57 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/08 16:48:39 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:14:50 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	backcopy(unsigned char *dest, unsigned char *src, size_t n)
+static void	backcopy(unsigned char *dest, unsigned char *src, size_t n)
 {
 	size_t	i;
 
@@ -24,7 +24,7 @@ void	backcopy(unsigned char *dest, unsigned char *src, size_t n)
 	}
 }
 
-void	frontcopy(unsigned char *dest, unsigned char *src, size_t n)
+static void	frontcopy(unsigned char *dest, unsigned char *src, size_t n)
 {
 	size_t	i;
 

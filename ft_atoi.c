@@ -6,13 +6,13 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 10:20:29 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/09 09:28:45 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:11:32 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	ft_check_front_atoi(const char *str, long num, int i, int sign)
+static long	ft_check_front_atoi(const char *str, long num, int i, int sign)
 {
 	while (str[i] == ' ' || (9 <= str[i] && str[i] <= 13))
 		i++;

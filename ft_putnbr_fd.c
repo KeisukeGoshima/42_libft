@@ -6,14 +6,14 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 08:47:27 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/09 10:08:45 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:16:25 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void	setnumber(long n, long div, int fd)
+static void	setnumber(long n, long div, int fd)
 {
 	long	a;
 	long	b;
@@ -31,6 +31,8 @@ void	ft_putnbr_fd(int n, int fd)
 	long	num;
 	long	div;
 
+	if (fd < 0)
+		return ;
 	num = n;
 	if (num == 0)
 	{
