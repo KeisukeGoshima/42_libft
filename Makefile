@@ -6,7 +6,6 @@ BSRUS		= ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lsti
 OBJS		= $(notdir $(SRCS:.c=.o))
 BOBJS		= $(notdir $(BSRUS:.c=.o))
 INCLUDEDIR	= ./includes
-INCLUDE		= ./includes/ft.h
 NAME		= libft.a
 
 ifdef WITH_BONUS
