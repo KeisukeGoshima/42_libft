@@ -29,7 +29,3 @@ $(NAME):		$(OBJS)
 
 bonus:			
 				make WITH_BONUS=1
-
-wfcleab:
-				del *.o
-				del *.a
