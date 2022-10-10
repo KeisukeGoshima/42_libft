@@ -16,7 +16,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	if (new != NULL || lst != NULL)
+	if (new != NULL && lst != NULL)
 	{
 		temp = ft_lstlast(new);
 		if (lst != NULL)
@@ -28,7 +28,8 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	t_list * l =  NULL; t_list * l2 =  NULL; 
-// 	ft_lstadd_front(&l, ft_lstnew((void*)1));
-// 	printf("%d", (int)l->content);
+// 	t_list **l =  NULL; t_list * l2 =  ft_lstnew((void*)1);
+// 	printf("%p\n", l2);
+// 	ft_lstadd_front(l, l2);
+// 	printf("%p", l);
 // }
