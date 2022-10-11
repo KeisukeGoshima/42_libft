@@ -24,6 +24,7 @@ static void	error_check(char **str)
 	i = 0;
 	while (str[i] != NULL)
 		free(str[i++]);
+	free(str);
 }
 
 char	**ft_split(char const *s, char c)

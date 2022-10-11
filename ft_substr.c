@@ -32,8 +32,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		if (len_s <= start + i)
-			break ;
 		dest[i] = s[start + i];
 		i++;
 	}
