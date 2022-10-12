@@ -6,19 +6,17 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:51:40 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/10 11:19:22 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/11 11:34:44 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static size_t	ft_frontcheck(char const *s1, char const *set, size_t front)
+static int	ft_frontcheck(char const *s1, char const *set, int front)
 {
-	size_t	i;
+	int	i;
 
-	if (set == NULL)
-		return (front);
 	while (s1[front] != '\0')
 	{
 		i = 0;
@@ -35,18 +33,16 @@ static size_t	ft_frontcheck(char const *s1, char const *set, size_t front)
 	return (front);
 }
 
-static size_t	ft_backcheck(char const *s1, char const *set, size_t back)
+static int	ft_backcheck(char const *s1, char const *set, int back)
 {
-	size_t	i;
+	int	i;
 
-	if (set == NULL)
-		return (back);
-	while (back > 0)
+	while (back >= 0)
 	{
 		i = 0;
 		while (set[i] != '\0')
 		{
-			if (s1[back - 1] == set[i])
+			if (s1[back] == set[i])
 				break ;
 			i++;
 		}
@@ -59,23 +55,23 @@ static size_t	ft_backcheck(char const *s1, char const *set, size_t back)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	front;
-	size_t	back;
-	size_t	i;
+	int		front;
+	int		back;
+	int		i;
 	char	*str;
 
-	if (s1 == NULL)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
 	front = ft_frontcheck(s1, set, 0);
-	back = ft_backcheck(s1, set, ft_strlen(s1));
+	back = ft_backcheck(s1, set, ft_strlen(s1) - 1);
 	if (front > back)
 		str = malloc(sizeof(char) * 1);
 	else
-		str = malloc(sizeof(char) * (back - front + 1));
+		str = malloc(sizeof(char) * (back - front + 2));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	while (i < back - front)
+	while (i < back - front + 1)
 	{
 		str[i] = s1[front + i];
 		i++;
@@ -90,7 +86,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 // 	char *str = "*;|@123***456@|;";
 // 	char *dest;
 
-// 	dest = ft_strtrim(str, "*;|@123456");
+// 	dest = ft_strtrim("", " \n\t");
 // 	printf("%s", dest);
 // 	return (0);
 // }

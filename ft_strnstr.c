@@ -6,7 +6,7 @@
 /*   By: kgoshima <kgoshima@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:22:31 by kgoshima          #+#    #+#             */
-/*   Updated: 2022/10/10 11:18:38 by kgoshima         ###   ########.fr       */
+/*   Updated: 2022/10/11 11:10:01 by kgoshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static char	*ft_search(const char *s1, const char *s2, size_t len)
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && len == 0)
 		return (NULL);
 	if (s2[0] == '\0')
 		return ((char *)s1);
